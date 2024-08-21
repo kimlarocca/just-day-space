@@ -1,0 +1,47 @@
+.p-inputtext,
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+select,
+textarea {
+  width: 100%;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-5);
+  font-weight: 300;
+  border-radius: var(--border-radius);
+  border-color: var(--purple);
+  height: var(--forms-input-height);
+  max-width: var(--forms-input-width);
+  padding: var(--forms-input-padding);
+
+  &::placeholder {
+    color: var(--gray);
+    font-family: var(--font-family);
+    font-size: var(--font-size-5);
+    font-weight: 300;
+    line-height: calc(var(--forms-input-height) / 2);
+  }
+}
+
+.p-inputnumber,
+.p-autocomplete,
+.p-dropdown,
+.p-password {
+  width: 100%;
+  line-height: calc(var(--forms-input-height) / 2);
+}
+
+.p-float-label label,
+.p-dropdown .p-dropdown-label.p-placeholder,
+label {
+  font-family: var(--font-family);
+  font-size: var(--font-size-5);
+  font-weight: 300;
+  color: var(--gray);
+}
+
+.p-dropdown-label {
+  padding-top: 13px;
+}
