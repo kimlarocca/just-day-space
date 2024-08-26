@@ -1,19 +1,17 @@
 <template>
-  <div class="p-4 container">
-    <the-header class="mb-5" />
-    <main>
-      <router-view />
-    </main>
-    <the-footer />
-  </div>
+  <the-header />
+  <main>
+    <router-view />
+  </main>
+  <the-footer />
 </template>
 
 <script setup>
-useHead({
+useHead( {
   bodyAttrs: {
     class: 'default',
   },
-})
+} )
 </script>
 
 <style lang="scss">

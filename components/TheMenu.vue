@@ -1,92 +1,17 @@
 <template>
-  <nav v-if="currentUserProfile">
-    <nuxt-link
-      to="/dashboard"
-      class="block plain mb-4 text-center"
-      @click="emit('menuClicked', true)"
-    >
-      <cuetip-logo-minimal />
+  <nav class="mx-4">
+    <logo class="mb-3" />
+    <nuxt-link to="/login" class="plain" @click="emit('menuClicked', true)">
+      <Button label="log in or sign up" class="w-full" />
     </nuxt-link>
-    <ul>
-      <li>
-        <nuxt-link
-          to="/weekly-pricing"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          <i class="pi pi-dollar mr-3" /> enter weekly pricing
-        </nuxt-link>
-      </li>
-      <li v-if="currentUserProfile.farm_owner">
-        <nuxt-link
-          to="/dashboard"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          <i class="pi pi-chart-bar mr-3" /> cannabis dashboard
-        </nuxt-link>
-      </li>
-      <li v-if="currentUserProfile.hemp_farm_owner">
-        <nuxt-link
-          to="/dashboard-hemp"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          <i class="pi pi-chart-bar mr-3" /> hemp dashboard
-        </nuxt-link>
-      </li>
-      <li v-if="currentUserProfile.lab_owner">
-        <nuxt-link
-          to="/dashboard-concentrates"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          <i class="pi pi-chart-bar mr-3" /> concentrates dashboard
-        </nuxt-link>
-      </li>
-      <li v-if="currentUserProfile.farm_owner">
-        <nuxt-link
-          to="/cannabis"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          <i class="pi pi-folder mr-3" /> my strains
-        </nuxt-link>
-      </li>
-      <li v-if="currentUserProfile.hemp_farm_owner">
-        <nuxt-link
-          to="/hemp"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          <i class="pi pi-folder mr-3" /> my hemp
-        </nuxt-link>
-      </li>
-      <li v-if="currentUserProfile.lab_owner">
-        <nuxt-link
-          to="/concentrates"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          <i class="pi pi-folder mr-3" /> my concentrates
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link
-          to="/history"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          <i class="pi pi-history mr-3" /> my pricing history
-        </nuxt-link>
-      </li>
+    <ul class="mt-3">
       <li>
         <nuxt-link
           to="/settings"
           class="plain flex align-items-center"
           @click="emit('menuClicked', true)"
         >
-          <i class="pi pi-user mr-3" /> manage profile
+          Manage profile
         </nuxt-link>
       </li>
       <li>
@@ -95,7 +20,7 @@
           class="plain flex align-items-center"
           @click="emit('menuClicked', true)"
         >
-          <i class="pi pi-question-circle mr-3" /> help center
+          Help center
         </nuxt-link>
       </li>
       <li>
@@ -104,7 +29,7 @@
           class="plain flex align-items-center"
           @click="emit('menuClicked', true)"
         >
-          <i class="pi pi-sign-out mr-3" /> logout
+          Logout
         </nuxt-link>
       </li>
     </ul>
@@ -124,22 +49,22 @@ nav {
     margin: 0;
   }
   li {
-    height: 48px;
-    line-height: 48px;
+    height: 40px;
+    line-height: 40px;
     a,
     a:visited,
     a:active {
-      padding-left: 1.5rem;
       text-transform: capitalize;
       display: block;
       width: 95%;
-      color: var(--gray);
-      font-weight: 500;
+      color: var(--text-color);
+      font-weight: 300;
+      font-size: var(--font-size-6);
       &:hover {
-        color: var(--green);
+        color: var(--purple);
       }
       &.router-link-active:first-of-type {
-        background: var(--green);
+        background: var(--purple);
         border-top-right-radius: 40px;
         border-bottom-right-radius: 40px;
         color: var(--white);

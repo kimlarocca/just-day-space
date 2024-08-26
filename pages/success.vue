@@ -2,7 +2,7 @@
   <div class="hemp">
     <Html lang="en">
       <Head>
-        <Title>Cuetip Benchmark | Success!</Title>
+        <Title>Just Day Space | Success!</Title>
       </Head>
     </Html>
     <h2 class="mb-4">Success!</h2>

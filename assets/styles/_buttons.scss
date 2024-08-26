@@ -2,9 +2,9 @@
 .p-button:visited {
     cursor: pointer;
     color: var(--white);
-    background: var(--green);
+    background: var(--purple);
     text-align: center;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     width: fit-content;
     min-width: 240px;
     text-transform: uppercase;
@@ -22,7 +22,7 @@
     &:hover,
     &:enabled:hover {
         color: var(--white);
-        background: var(--green);
+        background: var(--purple);
         opacity: var(--opacity-on-hover);
     }
 }

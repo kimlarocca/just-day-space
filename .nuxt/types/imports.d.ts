@@ -3,15 +3,11 @@ export {}
 declare global {
   const abortNavigation: typeof import('../../node_modules/nuxt/dist/app')['abortNavigation']
   const addRouteMiddleware: typeof import('../../node_modules/nuxt/dist/app')['addRouteMiddleware']
-  const blue: typeof import('../../utils/charts')['blue']
   const clearError: typeof import('../../node_modules/nuxt/dist/app')['clearError']
   const clearNuxtData: typeof import('../../node_modules/nuxt/dist/app')['clearNuxtData']
-  const colorPalette: typeof import('../../utils/charts')['colorPalette']
   const computed: typeof import('vue')['computed']
   const createError: typeof import('../../node_modules/nuxt/dist/app')['createError']
   const customRef: typeof import('vue')['customRef']
-  const darkBlue: typeof import('../../utils/charts')['darkBlue']
-  const darkPurple: typeof import('../../utils/charts')['darkPurple']
   const defineAppConfig: typeof import('../../node_modules/nuxt/dist/app')['defineAppConfig']
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
   const defineComponent: typeof import('vue')['defineComponent']
@@ -27,9 +23,6 @@ declare global {
   const formatDate: typeof import('../../utils/helpers')['formatDate']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
-  const gradientEnd: typeof import('../../utils/charts')['gradientEnd']
-  const gradientStart: typeof import('../../utils/charts')['gradientStart']
-  const green: typeof import('../../utils/charts')['green']
   const h: typeof import('vue')['h']
   const inject: typeof import('vue')['inject']
   const injectHead: typeof import('@unhead/vue')['injectHead']
@@ -46,7 +39,6 @@ declare global {
   const markRaw: typeof import('vue')['markRaw']
   const navigateTo: typeof import('../../node_modules/nuxt/dist/app')['navigateTo']
   const nextTick: typeof import('vue')['nextTick']
-  const nth: typeof import('../../utils/charts')['nth']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
   const onBeforeRouteLeave: typeof import('vue-router')['onBeforeRouteLeave']
@@ -63,19 +55,14 @@ declare global {
   const onServerPrefetch: typeof import('vue')['onServerPrefetch']
   const onUnmounted: typeof import('vue')['onUnmounted']
   const onUpdated: typeof import('vue')['onUpdated']
-  const pink: typeof import('../../utils/charts')['pink']
   const prefetchComponents: typeof import('../../node_modules/nuxt/dist/app')['prefetchComponents']
   const preloadComponents: typeof import('../../node_modules/nuxt/dist/app')['preloadComponents']
   const preloadPayload: typeof import('../../node_modules/nuxt/dist/app')['preloadPayload']
   const preloadRouteComponents: typeof import('../../node_modules/nuxt/dist/app')['preloadRouteComponents']
-  const primaryColor: typeof import('../../utils/charts')['primaryColor']
-  const primaryFontColor: typeof import('../../utils/charts')['primaryFontColor']
   const provide: typeof import('vue')['provide']
   const proxyRefs: typeof import('vue')['proxyRefs']
-  const purple: typeof import('../../utils/charts')['purple']
   const reactive: typeof import('vue')['reactive']
   const readonly: typeof import('vue')['readonly']
-  const red: typeof import('../../utils/charts')['red']
   const ref: typeof import('vue')['ref']
   const refreshNuxtData: typeof import('../../node_modules/nuxt/dist/app')['refreshNuxtData']
   const reloadNuxtApp: typeof import('../../node_modules/nuxt/dist/app')['reloadNuxtApp']
@@ -135,12 +122,12 @@ declare global {
   const withMemo: typeof import('vue')['withMemo']
   const withModifiers: typeof import('vue')['withModifiers']
   const withScopeId: typeof import('vue')['withScopeId']
-  const yellow: typeof import('../../utils/charts')['yellow']
 }
 // for type re-export
 declare global {
   // @ts-ignore
   export type { Component, ComponentPublicInstance, ComputedRef, InjectionKey, PropType, Ref, VNode } from 'vue'
+  import('vue')
 }
 // for vue template auto import
 import { UnwrapRef } from 'vue'
@@ -148,15 +135,11 @@ declare module 'vue' {
   interface ComponentCustomProperties {
     readonly abortNavigation: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['abortNavigation']>
     readonly addRouteMiddleware: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['addRouteMiddleware']>
-    readonly blue: UnwrapRef<typeof import('../../utils/charts')['blue']>
     readonly clearError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['clearError']>
     readonly clearNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['clearNuxtData']>
-    readonly colorPalette: UnwrapRef<typeof import('../../utils/charts')['colorPalette']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['createError']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
-    readonly darkBlue: UnwrapRef<typeof import('../../utils/charts')['darkBlue']>
-    readonly darkPurple: UnwrapRef<typeof import('../../utils/charts')['darkPurple']>
     readonly defineAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['defineAppConfig']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
@@ -172,9 +155,6 @@ declare module 'vue' {
     readonly formatDate: UnwrapRef<typeof import('../../utils/helpers')['formatDate']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
-    readonly gradientEnd: UnwrapRef<typeof import('../../utils/charts')['gradientEnd']>
-    readonly gradientStart: UnwrapRef<typeof import('../../utils/charts')['gradientStart']>
-    readonly green: UnwrapRef<typeof import('../../utils/charts')['green']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly injectHead: UnwrapRef<typeof import('@unhead/vue')['injectHead']>
@@ -191,7 +171,6 @@ declare module 'vue' {
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly navigateTo: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['navigateTo']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
-    readonly nth: UnwrapRef<typeof import('../../utils/charts')['nth']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
     readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router')['onBeforeRouteLeave']>
@@ -208,19 +187,14 @@ declare module 'vue' {
     readonly onServerPrefetch: UnwrapRef<typeof import('vue')['onServerPrefetch']>
     readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
-    readonly pink: UnwrapRef<typeof import('../../utils/charts')['pink']>
     readonly prefetchComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['prefetchComponents']>
     readonly preloadComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['preloadComponents']>
     readonly preloadPayload: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['preloadPayload']>
     readonly preloadRouteComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['preloadRouteComponents']>
-    readonly primaryColor: UnwrapRef<typeof import('../../utils/charts')['primaryColor']>
-    readonly primaryFontColor: UnwrapRef<typeof import('../../utils/charts')['primaryFontColor']>
     readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly proxyRefs: UnwrapRef<typeof import('vue')['proxyRefs']>
-    readonly purple: UnwrapRef<typeof import('../../utils/charts')['purple']>
     readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
     readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
-    readonly red: UnwrapRef<typeof import('../../utils/charts')['red']>
     readonly ref: UnwrapRef<typeof import('vue')['ref']>
     readonly refreshNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['refreshNuxtData']>
     readonly reloadNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['reloadNuxtApp']>
@@ -280,6 +254,5 @@ declare module 'vue' {
     readonly withMemo: UnwrapRef<typeof import('vue')['withMemo']>
     readonly withModifiers: UnwrapRef<typeof import('vue')['withModifiers']>
     readonly withScopeId: UnwrapRef<typeof import('vue')['withScopeId']>
-    readonly yellow: UnwrapRef<typeof import('../../utils/charts')['yellow']>
   }
 }

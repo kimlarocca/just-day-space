@@ -13,6 +13,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: 300;
   margin: 0;
   padding: 0;
   color: var(--text-color);
@@ -20,36 +21,32 @@ h6 {
 
 h1,
 .like-h1 {
-  color: var(--green);
   @include typeface(header, 11);
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.5px;
   @media all and (min-width: $medium) {
     @include typeface(header, 14);
-    font-weight: 600;
+    font-weight: 300;
   }
 }
 
 h2,
 .like-h2 {
   @include typeface(header, 8);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5px;
   @media all and (min-width: $medium) {
     @include typeface(header, 10);
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
 h3,
 .like-h3 {
-  color: var(--green);
-  @include typeface(primary, 7);
-  font-weight: 600;
+  @include typeface(primary, 6);
   letter-spacing: 0.5px;
   @media all and (min-width: $medium) {
-    @include typeface(primary, 9);
-    font-weight: 600;
+    @include typeface(primary, 8);
     letter-spacing: 0.5px;
   }
 }
@@ -77,7 +74,6 @@ h5,
 
 h6,
 .like-h6 {
-  color: var(--green);
   @include typeface(primary, 4);
   font-weight: 600;
   letter-spacing: 0px;
@@ -98,10 +94,12 @@ td {
   @include typeface(primary, 5);
   font-weight: 300;
   letter-spacing: 0px;
+  line-height: 1.5;
   @media all and (min-width: $medium) {
     @include typeface(primary, 6);
     font-weight: 300;
     letter-spacing: 0px;
+    line-height: 1.5;
   }
 }
 

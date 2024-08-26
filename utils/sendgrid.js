@@ -3,12 +3,12 @@ export async function requestNewStrain( strainName, strainCategory, userEmail ) 
         personalizations: [ {
             to: [ {
                 email: 'frontdesk@cuetip.com',
-                name: 'Cuetip Benchmark App',
+                name: 'Just Day Space App',
             }, ],
         }, ],
         from: {
             email: 'noreply@cuetip.com',
-            name: 'Cuetip Benchmark App',
+            name: 'Just Day Space App',
         },
         subject: 'New Strain Request',
         content: [ {

@@ -2,7 +2,7 @@
   <div v-if="profile && profile.length > 0" class="settings">
     <Html lang="en">
       <Head>
-        <Title>Cuetip Benchmark | Profile Settings</Title>
+        <Title>Just Day Space | Profile Settings</Title>
       </Head>
     </Html>
     <div class="grid">
@@ -17,7 +17,7 @@
               <i class="pi pi-cog mr-2" /> Profile
             </nuxt-link>
           </p>
-          <divider class="gray my-3" />
+          <divider class="my-3" />
           <p>
             <nuxt-link
               to="#locations"
@@ -27,7 +27,7 @@
               <i class="pi pi-map-marker mr-2" /> Locations
             </nuxt-link>
           </p>
-          <divider class="gray my-3" />
+          <divider class="my-3" />
           <p>
             <nuxt-link
               to="#password"
@@ -37,7 +37,7 @@
               <i class="pi pi-lock mr-2" /> Change Password
             </nuxt-link>
           </p>
-          <divider class="gray my-3" />
+          <divider class="my-3" />
           <p>
             <nuxt-link
               to="#delete"
@@ -146,7 +146,7 @@ if ( data ) {
     font-weight: 500;
     &.active,
     &:hover {
-      color: var(--green);
+      color: var(--purple);
     }
   }
 }

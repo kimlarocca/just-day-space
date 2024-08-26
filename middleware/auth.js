@@ -1,5 +1,4 @@
 import {
-  useCurrentUser,
   useCurrentUserProfile
 } from '~/composables/states'
 

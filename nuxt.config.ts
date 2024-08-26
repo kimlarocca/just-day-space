@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Cuetip Benchmark',
+      title: 'Just Day Space',
       htmlAttrs: {
         lang: 'en',
       },
@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'msapplication-TileColor', content: '#f4f2f0' },
         { name: 'theme-color', content: '#f4f2f0' },
-        { name: 'description', content: 'Cuetip is a tech and data provider of premium technology and services to the entire supply chain in the cannabis space.' }
+        { name: 'description', content: 'Connecting empty spaces with people who need them.' }
       ],
       link: [
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
@@ -24,20 +24,17 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com'
         }
       ],
-      script: [
-        { id: 'ze-snippet', src: 'https://static.zdassets.com/ekr/snippet.js?key=522fb0c1-1c9e-4801-8800-5c24e938f131' }
-      ],
     },
   },
   modules: ['@nuxtjs/supabase'],
   supabase: {
-    key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9vcmpldHFyenBnbGx6cmRhbmdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ0NjIyMTcsImV4cCI6MjAxMDAzODIxN30.u4WDh3DATcibxn_i9TGZxwuO_15FsoklszHCJkBdzbY',
-    url: 'https://oorjetqrzpgllzrdangl.supabase.co',
+    key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6Ym56ZHJid2RnY2NtYXdxd3RmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQwOTc4NzYsImV4cCI6MjAzOTY3Mzg3Nn0.w02ujkoreWL7FhuAqP5nDNFTVsKIAwrh4ZoknJ8WuJs',
+    url: 'https://qzbnzdrbwdgccmawqwtf.supabase.co',
     redirect: true,
   },
   css: [
         'primevue/resources/themes/mdc-light-deeppurple/theme.css',
-    'primevue/resources/primevue.min.css',
+        'primevue/resources/primevue.min.css',
         'primeicons/primeicons.css',
         'primeflex/primeflex.css',
         '@/assets/styles/main.scss',
@@ -51,10 +48,10 @@ export default defineNuxtConfig({
     public: {
       environment: process.env.environment ?? 'local',
       gtagId: 'G-6CN5WGM5L0',
-      supabaseAuthSignInRedirectTo: process.env.environment === 'local' ? 'http://localhost:3000' : 'https://benchmark.cuetip.com',
-      supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9vcmpldHFyenBnbGx6cmRhbmdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ0NjIyMTcsImV4cCI6MjAxMDAzODIxN30.u4WDh3DATcibxn_i9TGZxwuO_15FsoklszHCJkBdzbY',
-      supabaseUrl: 'https://oorjetqrzpgllzrdangl.supabase.co',
-      supabaseAuthTokenName: 'sb-oorjetqrzpgllzrdangl-auth-token',
+      supabaseAuthSignInRedirectTo: process.env.environment === 'local' ? 'http://localhost:3000' : 'https://justdayspace.com',
+      supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6Ym56ZHJid2RnY2NtYXdxd3RmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQwOTc4NzYsImV4cCI6MjAzOTY3Mzg3Nn0.w02ujkoreWL7FhuAqP5nDNFTVsKIAwrh4ZoknJ8WuJs',
+      supabaseUrl: 'https://qzbnzdrbwdgccmawqwtf.supabase.co',
+      supabaseAuthTokenName: 'sb-qzbnzdrbwdgccmawqwtf-auth-token',
     }
   },
 })

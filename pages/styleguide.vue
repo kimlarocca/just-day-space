@@ -2,10 +2,10 @@
   <div class="styleguide container">
     <Html lang="en">
       <Head>
-        <Title>Cuetip Benchmark | Styleguide</Title>
+        <Title>Just Day Space | Styleguide</Title>
       </Head>
     </Html>
-    <h1>Cuetip Styleguide</h1>
+    <h1>Styleguide</h1>
     <divider class="my-7" />
     <h1 class="mb-4">H1 Lorem Ipsum Dolor Sit Amet</h1>
     <h2 class="mb-4">H2 Lorem Ipsum Dolor Sit Amet</h2>
@@ -33,7 +33,6 @@
     </p>
     <p class="mb-4 small">Here is a paragraph with small text.</p>
     <div class="tag mb-4">this is a tag</div>
-    <h3 class="tab-link">Tab Header</h3>
     <divider class="my-7" />
     <div class="mb-3">
       <span class="p-float-label inline">
@@ -84,10 +83,6 @@
 </template>
 
 <script setup>
-definePageMeta( {
-  layout: 'blank',
-} )
-
 const checked = ref( true )
 const cities = ref( [
   { name: 'New York', code: 'NY' },

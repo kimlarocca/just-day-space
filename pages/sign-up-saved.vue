@@ -2,7 +2,7 @@
   <div class="sign-up">
     <Html lang="en">
       <Head>
-        <Title>Cuetip Benchmark | Sign Up</Title>
+        <Title>Just Day Space | Sign Up</Title>
       </Head>
     </Html>
     <header class="flex align-items-end justify-content-between">
@@ -31,10 +31,6 @@
 </template>
 
 <script setup>
-definePageMeta( {
-  layout: 'blank',
-} )
-
 import { useCurrentUser } from '~/composables/states'
 
 const currentUser = useCurrentUser()

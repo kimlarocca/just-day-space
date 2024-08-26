@@ -10,6 +10,7 @@ import AccordionTab from "primevue/accordiontab"
 import Avatar from "primevue/avatar"
 import AutoComplete from "primevue/autocomplete"
 import Button from "primevue/button"
+import Card from "primevue/card"
 import Checkbox from 'primevue/checkbox';
 import Dialog from 'primevue/dialog'
 import Divider from 'primevue/divider'
@@ -36,6 +37,7 @@ export default defineNuxtPlugin( ( nuxtApp ) => {
     nuxtApp.vueApp.component( 'Avatar', Avatar )
     nuxtApp.vueApp.component( 'AutoComplete', AutoComplete )
     nuxtApp.vueApp.component( 'Button', Button )
+    nuxtApp.vueApp.component( 'Card', Card )
     nuxtApp.vueApp.component( 'Checkbox', Checkbox )
     nuxtApp.vueApp.component( 'Dialog', Dialog )
     nuxtApp.vueApp.component( 'Divider', Divider )

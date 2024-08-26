@@ -2,7 +2,7 @@
   <div class="logout">
     <Html lang="en">
       <Head>
-        <Title>Cuetip Benchmark | Logout</Title>
+        <Title>Just Day Space | Logout</Title>
       </Head>
     </Html>
     <header class="flex align-items-end justify-content-between">
@@ -19,10 +19,6 @@
 </template>
 
 <script setup>
-definePageMeta( {
-  layout: 'blank',
-} )
-
 // sign out from supabase
 const client = useSupabaseClient()
 const { error } = await client.auth.signOut()

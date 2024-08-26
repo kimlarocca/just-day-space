@@ -21,10 +21,6 @@
 </template>
 
 <script setup>
-definePageMeta({
-  layout: 'blank',
-})
-
 import { useCurrentUser } from '~/composables/states'
 
 const currentUser = useCurrentUser()
@@ -33,15 +29,15 @@ const user = await client.auth.getUser()
 const session = await client.auth.getSession()
 
 // check supabase session for logged in user
-if (user?.data?.user) {
+if ( user?.data?.user ) {
   currentUser.value = user?.data?.user
-} else if (session?.data?.session?.user) {
+} else if ( session?.data?.session?.user ) {
   currentUser.value = session?.data?.session?.user
 }
 
-onMounted(() => {
-  if (currentUser.value) {
+onMounted( () => {
+  if ( currentUser.value ) {
     window.location.href = '/dashboard'
   }
-})
+} )
 </script>

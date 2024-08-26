@@ -2,7 +2,7 @@
   <div class="forgot-password">
     <Html lang="en">
       <Head>
-        <Title>Cuetip Benchmark | Forgot Password</Title>
+        <Title>Just Day Space | Forgot Password</Title>
       </Head>
     </Html>
     <header class="flex align-items-end justify-content-between">
@@ -24,9 +24,3 @@
     <supabase-login-with-magic-link />
   </div>
 </template>
-
-<script setup>
-definePageMeta( {
-  layout: 'blank',
-} )
-</script>
