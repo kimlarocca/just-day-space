@@ -2,7 +2,7 @@
   font-family: var(--font-family-#{$type});
   letter-spacing: 1;
   font-weight: var(--font-weight-#{$type});
-  line-height: var(--line-height-#{$size});
+  // line-height: var(--line-height-#{$size});
   font-size: var(--font-size-#{$size});
 }
 

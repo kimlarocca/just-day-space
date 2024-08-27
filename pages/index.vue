@@ -1,14 +1,16 @@
 <template>
   <div class="index">
-    <Hero class="mb-3" />
+    <Hero class="mb-6" />
+    <div class="container-gray">
+      <p>filtering icons go here</p>
+    </div>
     <div class="p-4">
-      <h2 class="mb-4">Popular Places</h2>
-      <div class="grid mb-6">
-        <div class="col col-4"><Sample-Card /></div>
-        <div class="col col-4"><Sample-Card /></div>
-        <div class="col col-4"><Sample-Card /></div>
-      </div>
-      <h2 class="mb-3">Quiet Places</h2>
+      <Collection title="Popular Places" class="mb-6" />
+      <Collection title="Quiet Places" class="mb-6" />
+      <Collection title="Places To Work" class="mb-6" />
+    </div>
+    <div class="container-gray">
+      <p>CTA for hosting a space goes here</p>
     </div>
   </div>
 </template>

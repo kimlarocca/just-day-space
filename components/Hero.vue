@@ -4,7 +4,12 @@
     <h2 class="mb-6">Connecting empty spaces with people who need them</h2>
     <div class="p-inputgroup w-fit">
       <span class="p-float-label inline">
-        <InputText id="location" v-model="location" class="w-full" required />
+        <InputText
+          id="location"
+          v-model="location"
+          required
+          style="width: 300px"
+        />
         <label for="location">Set Your Location</label>
       </span>
       <Button icon="pi pi-search" class="px-4" />

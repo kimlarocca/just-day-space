@@ -77,13 +77,12 @@ table {
   margin: auto;
 }
 
-.container-white {
-  background: var(--white);
+.container-gray {
+  padding: 1rem;
+  margin: 1rem;
+  background: var(--light-gray);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  &.border {
-    border: solid 1px var(--purple);
-  }
 }
 
 .width200 {
