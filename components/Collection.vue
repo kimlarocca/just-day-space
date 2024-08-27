@@ -40,7 +40,7 @@
       </div>
     </div>
     <p class="text-base">
-      <nuxt-link to="/places">
+      <nuxt-link to="/">
         View more {{ title }} <i class="pi pi-angle-right" />
       </nuxt-link>
     </p>

@@ -1,13 +1,13 @@
 <template>
   <nav class="mx-4">
     <logo class="mb-3" />
-    <nuxt-link to="/login" class="plain" @click="emit('menuClicked', true)">
+    <nuxt-link to="/" class="plain" @click="emit('menuClicked', true)">
       <Button label="log in or sign up" class="w-full" />
     </nuxt-link>
     <ul class="mt-3">
       <li>
         <nuxt-link
-          to="/settings"
+          to="/"
           class="plain flex align-items-center"
           @click="emit('menuClicked', true)"
         >
@@ -16,7 +16,7 @@
       </li>
       <li>
         <nuxt-link
-          to="/help"
+          to="/"
           class="plain flex align-items-center"
           @click="emit('menuClicked', true)"
         >
@@ -25,7 +25,7 @@
       </li>
       <li>
         <nuxt-link
-          to="/logout"
+          to="/"
           class="plain flex align-items-center"
           @click="emit('menuClicked', true)"
         >

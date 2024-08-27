@@ -9,7 +9,7 @@
       <nuxt-link to="/" class="plain"><cuetip-logo /></nuxt-link>
       <p class="small">
         Already have an account?
-        <nuxt-link to="/sign-in" class="like-h6">Sign In</nuxt-link>
+        <nuxt-link to="/" class="like-h6">Sign In</nuxt-link>
       </p>
     </header>
     <divider class="mb-6" />

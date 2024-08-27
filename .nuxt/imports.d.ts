@@ -36,5 +36,4 @@ export { useSupabaseAuthClient } from '../node_modules/@nuxtjs/supabase/dist/run
 export { useSupabaseClient } from '../node_modules/@nuxtjs/supabase/dist/runtime/composables/useSupabaseClient';
 export { useSupabaseToken } from '../node_modules/@nuxtjs/supabase/dist/runtime/composables/useSupabaseToken';
 export { useSupabaseUser } from '../node_modules/@nuxtjs/supabase/dist/runtime/composables/useSupabaseUser';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
