@@ -10,33 +10,21 @@
           class="pi pi-bars text-xl p-1 cursor-pointer mr-1"
           @click="visible = true"
         />
-        <nuxt-link
-          to="/settings"
-          class="plain white clickable"
-          aria-label="manage profile"
-        >
-          <Avatar
-            v-if="currentUserProfile && currentUserProfile.avatar_url"
-            :image="currentUserProfile.avatar_url"
-            shape="circle"
-            aria-label="user avatar image"
-          />
-          <Avatar
-            v-else
-            shape="circle"
-            icon="pi pi-user"
-            aria-label="user avatar image"
-          />
-        </nuxt-link>
       </div>
     </div>
-    <Sidebar v-model:visible="visible" :baseZIndex="10000" position="right">
+    <Sidebar
+      v-model:visible="visible"
+      :baseZIndex="10000"
+      position="right"
+      class="w-full md:w-25rem"
+    >
       <the-menu @menu-clicked="visible = false" />
     </Sidebar>
   </header>
 </template>
 
 <script setup>
+const currentUser = useSupabaseUser()
 const currentUserProfile = useCurrentUserProfile()
 const visible = ref( false )
 </script>

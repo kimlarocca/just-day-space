@@ -6,37 +6,31 @@
         {{ errorMessage }}
       </Message>
     </template>
-    <form @submit.prevent="login" class="width400">
+    <form @submit.prevent="login">
       <div class="mb-3">
-        <span class="p-float-label inline">
-          <InputText
-            id="email"
-            v-model="email"
-            class="w-full"
-            type="email"
-            placeholder="Email Address"
-            required
-          />
-          <label for="email">Email Address</label>
-        </span>
+        <InputText
+          id="email"
+          v-model="email"
+          class="w-full"
+          type="email"
+          placeholder="Email Address"
+          required
+        />
       </div>
-      <div class="mb-2">
-        <span class="p-float-label inline">
-          <Password
-            id="password"
-            toggleMask
-            :feedback="false"
-            v-model="password"
-            class="w-full mb-2"
-            type="password"
-            placeholder="Password"
-            required
-          />
-          <label for="password">Password</label>
-        </span>
+      <div class="mb-3">
+        <Password
+          id="password"
+          toggleMask
+          :feedback="false"
+          v-model="password"
+          class="w-full"
+          type="password"
+          placeholder="Password"
+          required
+        />
       </div>
       <Button
-        label="Sign In With Email & Password"
+        label="Login With Email & Password"
         class="w-full"
         type="submit"
       />
@@ -47,6 +41,7 @@
 <script setup>
 const client = useSupabaseClient()
 const config = useRuntimeConfig()
+const emit = defineEmits( [ 'closePanel' ] )
 
 const email = ref( '' )
 const password = ref( '' )
@@ -66,6 +61,7 @@ const login = async () => {
       errorMessage.value = error
     }
   } else {
+    emit( 'closePanel' )
     navigateTo( '/dashboard' )
   }
 }

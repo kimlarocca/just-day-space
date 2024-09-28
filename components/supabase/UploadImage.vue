@@ -1,5 +1,6 @@
 <template>
   <div class="upload-image">
+    <h4 class="mb-4">Profile Image</h4>
     <ProgressSpinner class="inline-block mb-4" v-if="uploading" />
     <Avatar
       v-if="imageUrl"

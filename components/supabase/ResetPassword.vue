@@ -11,18 +11,15 @@
         </em>
       </p>
       <div v-else class="width400">
-        <div class="mb-4">
-          <span v-if="!successMessage" class="p-float-label inline">
-            <Password
-              id="password"
-              toggleMask
-              v-model="password"
-              type="password"
-              placeholder="New Password"
-              required
-            />
-            <label for="password">New Password</label>
-          </span>
+        <div class="mb-4" v-if="!successMessage">
+          <Password
+            id="password"
+            toggleMask
+            v-model="password"
+            type="password"
+            placeholder="New Password"
+            required
+          />
         </div>
         <Button
           v-if="!successMessage"
@@ -61,21 +58,21 @@
 <script setup>
 const currentUser = useSupabaseUser()
 const client = useSupabaseClient()
-const errorMessage = ref('')
-const password = ref('')
-const pending = ref(false)
-const successMessage = ref(null)
+const errorMessage = ref( '' )
+const password = ref( '' )
+const pending = ref( false )
+const successMessage = ref( null )
 
 const resetPassword = async () => {
   pending.value = true
-  const { error } = await client.auth.updateUser({
+  const { error } = await client.auth.updateUser( {
     email: currentUser.value.email,
     password: password.value,
-  })
+  } )
   pending.value = false
-  if (error) {
-    console.log(error)
-    if (error.toString().includes('8 characters')) {
+  if ( error ) {
+    console.log( error )
+    if ( error.toString().includes( '8 characters' ) ) {
       errorMessage.value = 'Password should be at least 8 characters.'
     } else {
       errorMessage.value = error

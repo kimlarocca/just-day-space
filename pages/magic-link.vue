@@ -1,9 +1,5 @@
 <template>
-  <div class="magic-link">
-    <header class="flex align-items-end justify-content-between">
-      <nuxt-link to="/" class="plain"><cuetip-logo /></nuxt-link>
-    </header>
-    <divider class="mb-6" />
+  <div class="magic-link container p-4">
     <h1 class="mb-3">Magic Link</h1>
     <h2 class="mb-2">Logging into your account...</h2>
     <divider class="my-6 w-2" />

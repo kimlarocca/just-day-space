@@ -1,20 +1,12 @@
 <template>
-  <div class="logout">
+  <div class="logout container p-4">
     <Html lang="en">
       <Head>
-        <Title>Just Day Space | Logout</Title>
+        <Title>Just Day Space | You've Been Logged Out</Title>
       </Head>
     </Html>
-    <header class="flex align-items-end justify-content-between">
-      <nuxt-link to="/" class="plain"><cuetip-logo /></nuxt-link>
-      <p class="small">
-        <nuxt-link to="/" class="like-h6">Sign In</nuxt-link>
-      </p>
-    </header>
-    <divider class="mb-7" />
-    <h1 class="mb-3">Logout</h1>
-    <h2 class="mb-3">You have been logged out</h2>
-    <p><a href="/">Click here</a> to return to the sign in page.</p>
+    <h1 class="mb-4">You've Been Logged Out</h1>
+    <p><a href="/">Click here</a> to return to the home page.</p>
   </div>
 </template>
 

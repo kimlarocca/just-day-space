@@ -1,75 +1,76 @@
 <template>
   <nav class="mx-4">
-    <logo class="mb-3" />
-    <nuxt-link to="/" class="plain" @click="emit('menuClicked', true)">
-      <Button label="log in or sign up" class="w-full" />
-    </nuxt-link>
-    <ul class="mt-3">
-      <li>
+    <div class="flex align-items-start">
+      <div class="mr-3">
         <nuxt-link
-          to="/"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
+          v-if="currentUserProfile?.avatar_url"
+          to="/settings"
+          class="plain white clickable ml-2"
+          aria-label="manage profile"
         >
-          Manage profile
+          <Avatar
+            :image="currentUserProfile?.avatar_url"
+            shape="circle"
+            size="large"
+            aria-label="user avatar image"
+          />
         </nuxt-link>
-      </li>
-      <li>
         <nuxt-link
-          to="/"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
+          to="/settings"
+          class="plain white clickable ml-2"
+          aria-label="manage profile"
         >
-          Help center
+          <Avatar
+            shape="circle"
+            size="large"
+            icon="pi pi-user"
+            aria-label="user avatar image"
+          />
         </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link
-          to="/"
-          class="plain flex align-items-center"
-          @click="emit('menuClicked', true)"
-        >
-          Logout
-        </nuxt-link>
-      </li>
-    </ul>
+      </div>
+      <div v-if="currentUser">
+        <p class="mb-2 font-bold">
+          Welcome back, {{ currentUserProfile.full_name }}
+        </p>
+        <p class="small mb-6">
+          <nuxt-link to="/logout" @click="emit('menuClicked', true)">
+            Log out
+          </nuxt-link>
+        </p>
+      </div>
+      <div v-else>
+        <p class="mb-2 font-bold">You are logged out.</p>
+        <Button @click="showLogin = true" label="log in" class="mb-2" />
+        <p class="small mb-6">
+          Don't have an account yet?
+          <nuxt-link to="/signup" @click="emit('menuClicked', true)">
+            Sign up
+          </nuxt-link>
+        </p>
+      </div>
+    </div>
+    <p class="mb-2">
+      <nuxt-link to="/" @click="emit('menuClicked', true)">
+        Help center
+      </nuxt-link>
+    </p>
+    <p>
+      <nuxt-link to="/" @click="emit('menuClicked', true)"> Logout </nuxt-link>
+    </p>
   </nav>
+  <Sidebar
+    v-model:visible="showLogin"
+    :baseZIndex="10000"
+    position="right"
+    class="w-full md:w-25rem"
+  >
+    <Login @close-panel="emit('menuClicked', true)" class="mx-4" />
+  </Sidebar>
 </template>
 
 <script setup>
+const currentUser = useSupabaseUser()
 const currentUserProfile = useCurrentUserProfile()
 const emit = defineEmits( [ 'menuClicked' ] )
+const showLogin = ref( false )
 </script>
-
-<style lang="scss">
-nav {
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    height: 40px;
-    line-height: 40px;
-    a,
-    a:visited,
-    a:active {
-      text-transform: capitalize;
-      display: block;
-      width: 95%;
-      color: var(--text-color);
-      font-weight: 300;
-      font-size: var(--font-size-6);
-      &:hover {
-        color: var(--purple);
-      }
-      &.router-link-active:first-of-type {
-        background: var(--purple);
-        border-top-right-radius: 40px;
-        border-bottom-right-radius: 40px;
-        color: var(--white);
-      }
-    }
-  }
-}
-</style>

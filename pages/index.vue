@@ -16,17 +16,23 @@
 </template>
 
 <script setup>
-import { useCurrentUser } from '~/composables/states'
-
-const currentUser = useCurrentUser()
+const currentUser = useSupabaseUser()
 const client = useSupabaseClient()
-const user = await client.auth.getUser()
-const session = await client.auth.getSession()
+const currentUserProfile = useCurrentUserProfile()
 
-// check supabase session for logged in user
-if ( user?.data?.user ) {
-  currentUser.value = user?.data?.user
-} else if ( session?.data?.session?.user ) {
-  currentUser.value = session?.data?.session?.user
+if ( currentUser.value ) {
+  const {
+    data,
+    error
+  } = await client
+    .from( 'profiles' )
+    .select( '*' )
+    .eq( 'id', currentUser.value.id )
+    .single()
+  if ( error ) {
+    console.error( error )
+  } else if ( data ) {
+    currentUserProfile.value = data
+  }
 }
 </script>
