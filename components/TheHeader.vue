@@ -5,7 +5,9 @@
         <logo />
       </nuxt-link>
       <div class="flex align-items-center">
-        <p class="mr-3 text-base">Rent Your Space</p>
+        <h5 class="mr-3 text-base">
+          <nuxt-link to="/signup">Rent Your Space</nuxt-link>
+        </h5>
         <i
           class="pi pi-bars text-xl p-1 cursor-pointer mr-1"
           @click="visible = true"
