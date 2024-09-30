@@ -1,6 +1,6 @@
 <template>
   <div class="upload-image">
-    <h4 class="mb-4">Profile Image</h4>
+    <h6 class="mb-4">Profile Image</h6>
     <ProgressSpinner class="inline-block mb-4" v-if="uploading" />
     <Avatar
       v-if="imageUrl"
@@ -19,9 +19,9 @@
     </p>
     <template v-else>
       <p v-if="!imageUrl" class="mb-3">
-        You have not added a profile photo yet.
+        You have not added a profile image yet.
       </p>
-      <div class="flex flex-column lg:flex-row">
+      <div class="flex">
         <FileUpload
           mode="basic"
           :customUpload="true"
@@ -29,15 +29,16 @@
           accept="image/*"
           :maxFileSize="1000000"
           :fileLimit="1"
-          choose-label="Update Photo"
+          choose-label="Update"
           :auto="true"
           upload-icon="pi pi-image"
+          class="mr-2 fit-width black"
+          style="height: 36px; text-transform: capitalize"
         />
         <Button
           v-if="imageUrl"
           @click="deleteImage"
-          class="mt-3 lg:mt-0 lg:ml-3 p-button-outlined fit-width"
-          label="Delete"
+          class="black p-button-rounded"
           icon="pi pi-trash"
         />
       </div>
@@ -62,6 +63,8 @@
 </template>
 
 <script setup>
+const emit = defineEmits( [ 'imageUploaded' ] )
+
 const currentUser = useSupabaseUser()
 const currentUserProfile = useCurrentUserProfile()
 const supabase = useSupabaseClient()
@@ -112,6 +115,7 @@ const uploadImage = async ( event ) => {
     } else {
       successMessage.value = 'Success! Your image has been saved.'
       currentUserProfile.value.avatar_url = imageUrl.value
+      emit( 'imageUploaded' )
     }
   } catch ( error ) {
     errorMessage.value = `Error: ${ error }`
@@ -143,9 +147,16 @@ const deleteImage = async () => {
 
 <style lang="scss" scoped>
 img {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   border: solid 1px var(--light-gray);
+}
+.upload-image-button {
+  height: 36px;
+}
+.p-avatar.p-avatar-circle {
+  width: 200px;
+  height: 200px;
 }
 </style>

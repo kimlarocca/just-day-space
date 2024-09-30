@@ -103,8 +103,7 @@ const _inlineRuntimeConfig = {
   },
   "public": {
     "environment": "local",
-    "gtagId": "G-6CN5WGM5L0",
-    "supabaseAuthSignInRedirectTo": "https://justdayspace.com",
+    "supabaseAuthSignInRedirectTo": "http://localhost:3000",
     "supabaseKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6Ym56ZHJid2RnY2NtYXdxd3RmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQwOTc4NzYsImV4cCI6MjAzOTY3Mzg3Nn0.w02ujkoreWL7FhuAqP5nDNFTVsKIAwrh4ZoknJ8WuJs",
     "supabaseUrl": "https://qzbnzdrbwdgccmawqwtf.supabase.co",
     "supabaseAuthTokenName": "sb-qzbnzdrbwdgccmawqwtf-auth-token",

@@ -32,8 +32,6 @@ declare module 'nuxt/schema' {
   interface PublicRuntimeConfig {
    environment: string,
 
-   gtagId: string,
-
    supabaseAuthSignInRedirectTo: string,
 
    supabaseKey: string,

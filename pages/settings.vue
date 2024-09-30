@@ -6,11 +6,8 @@
       </Head>
     </Html>
     <h1 class="mb-5">Account Settings</h1>
+    <supabase-upload-image :image="avatarImage || ''" class="mb-5" />
     <manage-user-profile />
-    <divider class="my-6 w-2" />
-    <manage-default-theme />
-    <divider class="my-6 w-2" />
-    <supabase-upload-image :image="avatarImage || ''" />
     <divider class="my-6 w-2" />
     <div id="password">
       <supabase-reset-password />
@@ -19,8 +16,8 @@
     <div id="delete">
       <h4 class="mb-4">Delete Account</h4>
       <p>
-        Please <a href="mailto:help@swiftcaptions.com">contact us</a> if you
-        wish to delete your account.
+        Please <a href="mailto:help@justdayspace.com">contact us</a> if you wish
+        to delete your account.
       </p>
     </div>
     <div class="changes-saved-toast">

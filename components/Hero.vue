@@ -32,7 +32,6 @@ const location = ref( '' )
 }
 .hero h1 {
   color: white;
-  font-weight: 700;
   font-size: var(--font-size-16);
 }
 .hero h2 {

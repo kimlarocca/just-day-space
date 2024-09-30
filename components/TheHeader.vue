@@ -1,12 +1,15 @@
 <template>
   <header class="p-4">
     <div class="flex align-items-center justify-content-between">
-      <nuxt-link to="/dashboard" class="plain">
+      <nuxt-link to="/" class="plain">
         <logo />
       </nuxt-link>
       <div class="flex align-items-center">
         <h5 class="mr-3 text-base">
-          <nuxt-link to="/signup">Rent Your Space</nuxt-link>
+          <nuxt-link v-if="currentUser" to="/dashboard">
+            Manage Your Spaces
+          </nuxt-link>
+          <nuxt-link v-else to="/signup">Rent Your Space</nuxt-link>
         </h5>
         <i
           class="pi pi-bars text-xl p-1 cursor-pointer mr-1"
@@ -27,7 +30,6 @@
 
 <script setup>
 const currentUser = useSupabaseUser()
-const currentUserProfile = useCurrentUserProfile()
 const visible = ref( false )
 </script>
 

@@ -1,10 +1,13 @@
 <template>
-  <div class="dashboard" v-if="currentUserProfile">
+  <div class="dashboard container p-4">
     <Html lang="en">
       <Head>
-        <Title>Just Day Space | Dashboard</Title>
+        <Title>Just Day Space | Manage Your Spaces</Title>
       </Head>
     </Html>
+    <!-- <h1 class="mb-5">Manage Your Spaces</h1> -->
+    <h1 class="mb-5">Add Your First Space</h1>
+    <p>Coming soon!</p>
   </div>
 </template>
 
@@ -14,4 +17,9 @@ definePageMeta( {
 } )
 
 const currentUserProfile = useCurrentUserProfile()
+
+//check if user has completed required profile fields
+if ( !currentUserProfile.value?.birthday ) {
+  navigateTo( '/onboarding' )
+}
 </script>

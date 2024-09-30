@@ -47,7 +47,7 @@ export default defineNuxtConfig({
     SENDGRID_API_KEY: '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',
     public: {
       environment: process.env.environment ?? 'local',
-      gtagId: 'G-6CN5WGM5L0',
+      // gtagId: 'G-6CN5WGM5L0',
       supabaseAuthSignInRedirectTo: process.env.environment === 'local' ? 'http://localhost:3000' : 'https://justdayspace.com',
       supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6Ym56ZHJid2RnY2NtYXdxd3RmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQwOTc4NzYsImV4cCI6MjAzOTY3Mzg3Nn0.w02ujkoreWL7FhuAqP5nDNFTVsKIAwrh4ZoknJ8WuJs',
       supabaseUrl: 'https://qzbnzdrbwdgccmawqwtf.supabase.co',

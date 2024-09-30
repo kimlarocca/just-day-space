@@ -10,6 +10,7 @@ import AccordionTab from "primevue/accordiontab"
 import Avatar from "primevue/avatar"
 import AutoComplete from "primevue/autocomplete"
 import Button from "primevue/button"
+import Calendar from 'primevue/calendar';
 import Checkbox from 'primevue/checkbox';
 import Dialog from 'primevue/dialog'
 import Divider from 'primevue/divider'
@@ -26,6 +27,7 @@ import ProgressBar from 'primevue/progressbar';
 import ProgressSpinner from 'primevue/progressspinner';
 import Sidebar from 'primevue/sidebar';
 import Tooltip from 'primevue/tooltip'
+import Textarea from 'primevue/textarea'
 
 export default defineNuxtPlugin( ( nuxtApp ) => {
     nuxtApp.vueApp.use( PrimeVue, {
@@ -36,6 +38,7 @@ export default defineNuxtPlugin( ( nuxtApp ) => {
     nuxtApp.vueApp.component( 'Avatar', Avatar )
     nuxtApp.vueApp.component( 'AutoComplete', AutoComplete )
     nuxtApp.vueApp.component( 'Button', Button )
+    nuxtApp.vueApp.component( 'Calendar', Calendar )
     nuxtApp.vueApp.component( 'Checkbox', Checkbox )
     nuxtApp.vueApp.component( 'Dialog', Dialog )
     nuxtApp.vueApp.component( 'Divider', Divider )
@@ -51,6 +54,7 @@ export default defineNuxtPlugin( ( nuxtApp ) => {
     nuxtApp.vueApp.component( 'ProgressBar', ProgressBar )
     nuxtApp.vueApp.component( 'ProgressSpinner', ProgressSpinner )
     nuxtApp.vueApp.component( 'Sidebar', Sidebar )
+    nuxtApp.vueApp.component( 'Textarea', Textarea )
     nuxtApp.vueApp.component( 'Tooltip', Tooltip )
     nuxtApp.vueApp.directive( 'tooltip', Tooltip )
 } )

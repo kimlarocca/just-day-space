@@ -19,6 +19,11 @@
     i {
         font-size: var(--font-size-4);
     }
+    &.black {
+        background: var(--black);
+        border: 1px solid var(--black);
+        color: var(--white);
+    }
     &:hover,
     &:enabled:hover {
         color: var(--white);

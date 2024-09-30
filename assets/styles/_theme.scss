@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 $xsmall: 375px;
 $xs: 375px;
@@ -6410,7 +6410,7 @@ $max: 7680px;
 }
 
 .p-avatar {
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     border-radius: 10px;
 }
 .p-avatar.p-avatar-lg {

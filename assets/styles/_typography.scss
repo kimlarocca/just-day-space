@@ -33,11 +33,11 @@ h1,
 h2,
 .like-h2 {
   @include typeface(header, 8);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.5px;
   @media all and (min-width: $medium) {
     @include typeface(header, 10);
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 
@@ -54,35 +54,35 @@ h3,
 h4,
 .like-h4 {
   @include typeface(primary, 7);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0px;
 }
 
 h5,
 .like-h5 {
   @include typeface(primary, 4);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0px;
   text-transform: uppercase;
   line-height: var(--font-size-4);
   @media all and (min-width: $medium) {
-    @include typeface(primary, 6);
-    font-weight: 500;
-    line-height: var(--font-size-6);
+    @include typeface(primary, 5);
+    font-weight: 400;
+    line-height: var(--font-size-5);
   }
 }
 
 h6,
 .like-h6 {
   @include typeface(primary, 4);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0px;
   text-transform: uppercase;
   line-height: var(--font-size-4);
   @media all and (min-width: $medium) {
-    @include typeface(primary, 6);
-    font-weight: 600;
-    line-height: var(--font-size-6);
+    @include typeface(primary, 5);
+    font-weight: 400;
+    line-height: var(--font-size-5);
   }
 }
 

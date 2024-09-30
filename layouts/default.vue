@@ -1,9 +1,9 @@
 <template>
-  <the-header />
+  <TheHeader />
   <main>
-    <router-view />
+    <NuxtPage />
   </main>
-  <the-footer />
+  <TheFooter />
 </template>
 
 <script setup>
