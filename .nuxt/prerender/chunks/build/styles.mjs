@@ -1,15 +1,15 @@
 const interopDefault = r => r.default || r || [];
 const styles = {
   "node_modules/nuxt/dist/app/entry.js": () => import('./entry-styles.jVxpSFlI.mjs').then(interopDefault),
-  "pages/signup.vue": () => import('./signup-styles.D1p53KKB.mjs').then(interopDefault),
   "pages/settings.vue": () => import('./settings-styles.Bc8MSbRe.mjs').then(interopDefault),
-  "pages/signup.vue?vue&type=style&index=0&scoped=9d8c427a&lang.scss": () => import('./signup-styles.OQY-rl0E.mjs').then(interopDefault),
+  "pages/signup.vue": () => import('./signup-styles.D1p53KKB.mjs').then(interopDefault),
   "pages/settings.vue?vue&type=style&index=0&lang.scss": () => import('./settings-styles.B3UCwdM6.mjs').then(interopDefault),
+  "pages/signup.vue?vue&type=style&index=0&scoped=9d8c427a&lang.scss": () => import('./signup-styles.OQY-rl0E.mjs').then(interopDefault),
   "components/SecondaryHero.vue": () => import('./SecondaryHero-styles.qxPViDEr.mjs').then(interopDefault),
   "components/Hero.vue": () => import('./Hero-styles.C6mFT3mE.mjs').then(interopDefault),
   "components/supabase/UploadImage.vue": () => import('./UploadImage-styles.DSL2eQ1X.mjs').then(interopDefault),
-  "components/supabase/UploadImage.vue?vue&type=style&index=0&scoped=a51024b3&lang.scss": () => import('./UploadImage-styles.D8nCb-lS.mjs').then(interopDefault),
   "components/SecondaryHero.vue?vue&type=style&index=0&scoped=f663560b&lang.scss": () => import('./SecondaryHero-styles.Bxyl9wnT.mjs').then(interopDefault),
+  "components/supabase/UploadImage.vue?vue&type=style&index=0&scoped=a51024b3&lang.scss": () => import('./UploadImage-styles.D8nCb-lS.mjs').then(interopDefault),
   "node_modules/nuxt/dist/app/components/error-404.vue": () => import('./error-404-styles.tQ-JJ2MV.mjs').then(interopDefault),
   "node_modules/nuxt/dist/app/components/error-500.vue": () => import('./error-500-styles.C6Ua1iY6.mjs').then(interopDefault),
   "node_modules/nuxt/dist/app/components/error-404.vue?vue&type=style&index=0&scoped=8842d7a0&lang.css": () => import('./error-404-styles.Bu6MjMo9.mjs').then(interopDefault),
