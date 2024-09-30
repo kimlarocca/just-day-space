@@ -1,6 +1,6 @@
 module.exports = {
     apps: [ {
-        name: 'CuetipBenchmark',
+        name: 'JustDaySpace',
         port: '3000',
         exec_mode: 'cluster',
         instances: 'max',
