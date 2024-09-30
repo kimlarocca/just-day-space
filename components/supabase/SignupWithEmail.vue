@@ -44,6 +44,7 @@
 
 <script setup>
 const client = useSupabaseClient()
+const config = useRuntimeConfig()
 
 const email = ref( '' )
 const password = ref( '' )
@@ -55,7 +56,7 @@ const login = async () => {
     email: email.value,
     password: password.value,
     options: {
-      emailRedirectTo: 'http://localhost:3000/success' // you will have to make the project part dynamic in whichever way the framework you are using allows you to do this.
+      emailRedirectTo: config.supabaseSuccessRedirectTo
     }
   } )
   if ( error ) {

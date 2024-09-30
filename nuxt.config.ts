@@ -48,7 +48,8 @@ export default defineNuxtConfig({
     public: {
       environment: process.env.environment ?? 'local',
       // gtagId: 'G-6CN5WGM5L0',
-      supabaseAuthSignInRedirectTo: process.env.environment === 'local' ? 'http://localhost:3000' : 'https://justdayspace.com',
+      supabaseAuthSignInRedirectTo: process.env.environment === 'local' ? 'http://localhost:3000' : 'https://app.justdayspace.com',
+      supabaseSuccessRedirectTo: process.env.environment === 'local' ? 'http://localhost:3000/success' : 'https://app.justdayspace.com/success',
       supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6Ym56ZHJid2RnY2NtYXdxd3RmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQwOTc4NzYsImV4cCI6MjAzOTY3Mzg3Nn0.w02ujkoreWL7FhuAqP5nDNFTVsKIAwrh4ZoknJ8WuJs',
       supabaseUrl: 'https://qzbnzdrbwdgccmawqwtf.supabase.co',
       supabaseAuthTokenName: 'sb-qzbnzdrbwdgccmawqwtf-auth-token',

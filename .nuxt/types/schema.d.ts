@@ -34,6 +34,8 @@ declare module 'nuxt/schema' {
 
    supabaseAuthSignInRedirectTo: string,
 
+   supabaseSuccessRedirectTo: string,
+
    supabaseKey: string,
 
    supabaseUrl: string,
