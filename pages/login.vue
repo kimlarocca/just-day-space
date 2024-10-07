@@ -1,34 +1,40 @@
 <template>
-  <div class="sign-in">
-    <h1 class="mb-3 flex align-items-center">
-      Connecting empty spaces with people who need them.
-    </h1>
-    <p class="mb-4 lg:mb-6">Enter your credentials to access your account.</p>
-    <supabase-login-with-email class="mb-4" />
-    <p class="like-h6">
-      <nuxt-link to="/forgot-password">Forgot Password?</nuxt-link>
-    </p>
-    <Divider class="mb-2 pt-6 w-4 lg:w-2" />
-    <p class="mb-3">Or sign in with social:</p>
-    <supabase-login-with-google />
-    <Divider class="mb-4 pt-6 w-4 lg:w-2" />
-    <p class="mb-3">Or sign in with a magic link:</p>
-    <supabase-login-with-magic-link />
+  <div class="signup container p-4">
+    <Html lang="en">
+      <Head>
+        <Title>Just Day Space | Login</Title>
+      </Head>
+    </Html>
+    <div class="grid">
+      <div class="col col-12 lg:col-5">
+        <h1 class="mb-3">Beta User Login</h1>
+        <h3>Get ready to make some money from your space!</h3>
+        <divider class="my-6 w-2" />
+        <div class="width400">
+          <supabase-login-with-email class="mb-4" />
+          <p class="small mb-4">
+            <nuxt-link to="/forgot-password" @click="emit('closePanel')">
+              Forgot Password?
+            </nuxt-link>
+          </p>
+        </div>
+      </div>
+      <div class="col col-7 hidden lg:flex">
+        <img
+          class="signup-image"
+          src="/images/hero.jpg"
+          alt="Signup for just day space"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
-<script setup>
-import { useCurrentUser } from '~/composables/states'
-
-const currentUser = useCurrentUser()
-const client = useSupabaseClient()
-const user = await client.auth.getUser()
-const session = await client.auth.getSession()
-
-// check supabase session for logged in user
-if ( user?.data?.user ) {
-  currentUser.value = user?.data?.user
-} else if ( session?.data?.session?.user ) {
-  currentUser.value = session?.data?.session?.user
+<style lang="scss" scoped>
+.signup-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--border-radius);
 }
-</script>
+</style>

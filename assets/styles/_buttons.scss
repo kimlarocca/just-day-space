@@ -24,6 +24,11 @@
         border: 1px solid var(--black);
         color: var(--white);
     }
+    &.white-outline {
+        background: transparent;
+        border: 1px solid var(--white);
+        color: var(--white);
+    }
     &:hover,
     &:enabled:hover {
         color: var(--white);
