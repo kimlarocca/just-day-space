@@ -1,5 +1,5 @@
 <template>
-  <div class="signup container p-4">
+  <div class="login container p-4">
     <Html lang="en">
       <Head>
         <Title>Just Day Space | Login</Title>
@@ -21,9 +21,9 @@
       </div>
       <div class="col col-7 hidden lg:flex">
         <img
-          class="signup-image rounded"
-          src="/images/hero.jpg"
-          alt="Signup for just day space"
+          class="login-image rounded"
+          src="/images/login.jpg"
+          alt="a woman doing yoga in a home yoga studio provided by just day space"
         />
       </div>
     </div>
@@ -31,7 +31,7 @@
 </template>
 
 <style lang="scss" scoped>
-.signup-image {
+.login-image {
   width: 100%;
   height: auto;
   object-fit: cover;

@@ -5,12 +5,12 @@
         <logo />
       </nuxt-link>
       <div class="flex align-items-center">
-        <h5 class="mr-3 text-base">
+        <p class="mr-3">
           <nuxt-link v-if="currentUser" to="/dashboard">
             Manage Your Spaces
           </nuxt-link>
           <nuxt-link v-else to="/signup">Rent Your Space</nuxt-link>
-        </h5>
+        </p>
         <i
           class="pi pi-bars text-xl p-1 cursor-pointer mr-1"
           @click="visible = true"

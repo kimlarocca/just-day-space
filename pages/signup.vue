@@ -20,8 +20,8 @@
       <div class="col col-7 hidden lg:flex">
         <img
           class="signup-image rounded"
-          src="/images/hero.jpg"
-          alt="Signup for just day space"
+          src="/images/signup.jpg"
+          alt="a home on a lake with boats and palm trees provided by just day space"
         />
       </div>
     </div>

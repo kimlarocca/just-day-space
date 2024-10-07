@@ -19,10 +19,12 @@ definePageMeta( {
 const currentUserProfile = useCurrentUserProfile()
 const hasSpaces = ref( false )
 
-//check if user has completed required profile fields
-if ( !currentUserProfile.value?.birthday ) {
-  navigateTo( '/onboarding' )
-}
+onMounted( () => {
+  //check if user has completed required profile fields
+  if ( currentUserProfile.value && !currentUserProfile.value.birthday ) {
+    navigateTo( '/onboarding' )
+  }
 
-// check if user has added any spaces yet
+  // check if user has added any spaces yet
+} )
 </script>
