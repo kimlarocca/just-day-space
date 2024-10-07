@@ -89,7 +89,7 @@
     --font-size: #{$fontSize};
     --text-secondary-color: #{$textSecondaryColor};
 
-    --border-radius: #{$borderRadius};
+    --border-radius: 20px;
     --transition-duration: #{$transitionDuration};
     --transition-ease: #{$transitionEase};
     --form-element-transition: #{$formElementTransition};
@@ -164,7 +164,7 @@
 
     --content-padding: #{$panelContentPadding};
     --inline-spacing: #{$inlineSpacing};
-    --border-radius: #{$borderRadius};
+    --border-radius: 20px;
 
     --surface-ground: #{$surfaceGround};
     --surface-section: #{$surfaceSection};
