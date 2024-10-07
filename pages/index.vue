@@ -1,38 +1,45 @@
 <template>
-  <div class="index">
-    <Hero class="mb-6" />
-    <div class="container-gray">
-      <p>filtering icons go here</p>
-    </div>
-    <div class="p-4">
-      <Collection title="Popular Places" class="mb-6" />
-      <Collection title="Quiet Places" class="mb-6" />
-      <Collection title="Places To Work" class="mb-6" />
-    </div>
-    <div class="container-gray">
-      <p>CTA for hosting a space goes here</p>
+  <div class="landing-page">
+    <div
+      class="container-black flex justify-content-center align-items-center flex-column p-5 text-center"
+    >
+      <p class="mb-2">JustDaySpace is</p>
+      <h1 class="mb-6">Launching Soon!</h1>
+      <a href="https://amyinfinity.com/justdayspace-signup" class="plain">
+        <Button label="Get Early Access" />
+      </a>
     </div>
   </div>
 </template>
 
 <script setup>
-const currentUser = useSupabaseUser()
-const client = useSupabaseClient()
-const currentUserProfile = useCurrentUserProfile()
+definePageMeta( {
+  layout: 'blank',
+} )
+</script>
 
-if ( currentUser.value ) {
-  const {
-    data,
-    error
-  } = await client
-    .from( 'profiles' )
-    .select( '*' )
-    .eq( 'id', currentUser.value.id )
-    .single()
-  if ( error ) {
-    console.error( error )
-  } else if ( data ) {
-    currentUserProfile.value = data
+<style lang="scss" scoped>
+.landing-page {
+  height: 100vh;
+  background-image: url("/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.landing-page h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: 400;
+  line-height: 4rem;
+  @media all and (min-width: 768px) {
+    font-size: 6rem;
+    line-height: 6rem;
   }
 }
-</script>
+.landing-page p {
+  font-size: 1.5rem;
+  color: white;
+  @media all and (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+</style>
