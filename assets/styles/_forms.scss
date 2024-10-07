@@ -10,7 +10,7 @@ textarea {
   font-family: var(--font-family);
   font-size: var(--font-size-5);
   font-weight: 300;
-  border-radius: var(--border-radius);
+  border-radius: 20px;
   border: 1px solid var(--light-gray);
   height: var(--forms-input-height);
   max-width: var(--forms-input-width);
@@ -50,7 +50,7 @@ label {
 textarea,
 .p-inputtextarea {
   height: auto;
-  border-radius: var(--border-radius);
+  border-radius: 20px;
   border: 1px solid var(--light-gray);
   &:focus, &:focus-visible {
     border: var(--forms-input-border);
@@ -58,7 +58,7 @@ textarea,
 }
 
 .p-calendar {
-  border-radius: var(--border-radius);
+  border-radius: 20px;
   border: 1px solid var(--light-gray);
   &:focus, &:focus-visible {
     border: var(--forms-input-border);
