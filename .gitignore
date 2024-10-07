@@ -72,3 +72,4 @@ sw.*
 *.swp
 
 .output/*
+.nuxt/*
