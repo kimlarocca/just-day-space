@@ -19,7 +19,7 @@
       </div>
       <div class="col col-7 hidden lg:flex">
         <img
-          class="signup-image"
+          class="signup-image rounded"
           src="/images/hero.jpg"
           alt="Signup for just day space"
         />

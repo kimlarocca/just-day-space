@@ -27,8 +27,8 @@
         </div>
         <div v-if="currentUser">
           <p class="mb-2 font-bold">
-            Welcome back<template v-if="currentUserProfile.full_name"
-              >, {{ currentUserProfile.full_name }} </template
+            Welcome back<template v-if="currentUserProfile?.full_name"
+              >, {{ currentUserProfile?.full_name }} </template
             >!
           </p>
           <p class="small">{{ currentUser?.email }}</p>
