@@ -21,7 +21,7 @@
         <img
           class="signup-image rounded"
           src="/images/signup.jpg"
-          alt="a home on a lake with boats and palm trees provided by just day space"
+          alt="a home with a private pool and views of the ocean provided by just day space"
         />
       </div>
     </div>
