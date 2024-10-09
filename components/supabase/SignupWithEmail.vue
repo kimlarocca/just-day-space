@@ -33,11 +33,7 @@
           required
         />
       </div>
-      <Button
-        label="sign up With Email & Password"
-        class="w-full"
-        type="submit"
-      />
+      <Button label="sign up" class="w-full" type="submit" />
     </form>
   </div>
 </template>

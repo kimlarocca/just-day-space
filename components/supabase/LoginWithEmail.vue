@@ -29,11 +29,7 @@
           required
         />
       </div>
-      <Button
-        label="Login With Email & Password"
-        class="w-full"
-        type="submit"
-      />
+      <Button label="Login" class="w-full" type="submit" />
     </form>
   </div>
 </template>

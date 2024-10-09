@@ -5,7 +5,7 @@
         <logo />
       </nuxt-link>
       <div class="flex align-items-center">
-        <p class="mr-3">
+        <p class="hidden md:block mr-3">
           <nuxt-link v-if="currentUser" to="/dashboard">
             Manage Your Spaces
           </nuxt-link>
