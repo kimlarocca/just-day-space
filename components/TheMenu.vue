@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="mx-4">
+    <div class="mx-3">
       <div class="flex align-items-start">
         <div class="mr-3">
           <nuxt-link
