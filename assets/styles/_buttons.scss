@@ -2,7 +2,7 @@
 .p-button:visited {
     cursor: pointer;
     color: var(--white);
-    background: var(--purple);
+    background: var(--black);
     text-align: center;
     border-radius: 20px;
     width: fit-content;
@@ -19,21 +19,23 @@
     i {
         font-size: var(--font-size-4);
     }
-    &.black {
-        background: var(--black);
-        border: 1px solid var(--black);
-        color: var(--white);
-    }
-    &.white-outline {
-        background: transparent;
-        border: 1px solid var(--white);
-        color: var(--white);
-    }
     &:hover,
     &:enabled:hover {
         color: var(--white);
-        background: var(--purple);
+        background: var(--black);
         opacity: var(--opacity-on-hover);
+    }
+    &.outline {
+        background: transparent;
+        border: 1px solid var(--black);
+        color: var(--black);
+        &:hover,
+        &:enabled:hover {
+            border: 1px solid var(--black);
+            color: var(--white);
+            background: var(--black);
+            opacity: var(--opacity-on-hover);
+        }
     }
 }
 

@@ -23,7 +23,7 @@ $max: 7680px;
     --surface-d: rgba(0, 0, 0, 0.12);
     --surface-e: #ffffff;
     --surface-f: #ffffff;
-    --white: #F2F3F4;
+    --white: #f2f3f4;
     --black: #000e2a;
     --blue: #3d62ed;
     --light-blue: #00b3ff;
@@ -31,7 +31,7 @@ $max: 7680px;
     --light-gray: #d3d3d3;
     --medium-gray: #979797;
     --green: #00bd70;
-    --red: #EB0000;
+    --red: #eb0000;
     --orange: #ffb800;
     --purple: #8000ff;
     --light-purple: #d8bff2;
@@ -122,7 +122,7 @@ $max: 7680px;
     --forms-input-outline-color: 1px solid var(--purple);
     --forms-inline-button-padding: 0 1rem;
     --transition: all 0.25s ease-out;
-    --opacity-on-hover: 0.8;
+    --opacity-on-hover: 0.7;
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     color-scheme: light;
 }
@@ -6539,7 +6539,7 @@ $max: 7680px;
 .p-progressbar .p-progressbar-value {
     border: 0 none;
     margin: 0;
-    background: var(--purple);
+    background: var(--light-blue);
 }
 .p-progressbar .p-progressbar-label {
     color: #ffffff;

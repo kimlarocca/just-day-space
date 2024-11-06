@@ -25,6 +25,7 @@ import Message from "primevue/message"
 import Password from 'primevue/password';
 import ProgressBar from 'primevue/progressbar';
 import ProgressSpinner from 'primevue/progressspinner';
+import RadioButton from 'primevue/radiobutton';
 import Sidebar from 'primevue/sidebar';
 import Tooltip from 'primevue/tooltip'
 import Textarea from 'primevue/textarea'
@@ -53,6 +54,7 @@ export default defineNuxtPlugin( ( nuxtApp ) => {
     nuxtApp.vueApp.component( 'Password', Password )
     nuxtApp.vueApp.component( 'ProgressBar', ProgressBar )
     nuxtApp.vueApp.component( 'ProgressSpinner', ProgressSpinner )
+    nuxtApp.vueApp.component( 'RadioButton', RadioButton )
     nuxtApp.vueApp.component( 'Sidebar', Sidebar )
     nuxtApp.vueApp.component( 'Textarea', Textarea )
     nuxtApp.vueApp.component( 'Tooltip', Tooltip )

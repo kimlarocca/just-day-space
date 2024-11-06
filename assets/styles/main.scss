@@ -78,7 +78,7 @@ table {
 }
 
 .container-black {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   height: 100vh;
   width: 100%;
 }
@@ -86,9 +86,8 @@ table {
 .container-gray {
   padding: 1rem;
   margin: 1rem;
-  background: var(--light-gray);
+  background: var(--gray-300);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
 }
 
 .width200 {
@@ -207,4 +206,8 @@ table {
 
 .rounded {
   border-radius: 20px;
+}
+
+.more-rounded {
+  border-radius: 40px;
 }

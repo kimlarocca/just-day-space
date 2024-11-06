@@ -75,6 +75,7 @@ h5,
 h6,
 .like-h6 {
   @include typeface(primary, 4);
+  color: var(--light-blue);
   font-weight: 400;
   letter-spacing: 0px;
   text-transform: uppercase;

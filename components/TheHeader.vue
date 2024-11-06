@@ -5,12 +5,12 @@
         <logo />
       </nuxt-link>
       <div class="flex align-items-center">
-        <p class="hidden md:block mr-3">
+        <!-- <p class="hidden md:block mr-3">
           <nuxt-link v-if="currentUser" to="/dashboard">
             Manage Your Spaces
           </nuxt-link>
           <nuxt-link v-else to="/signup">Rent Your Space</nuxt-link>
-        </p>
+        </p> -->
         <i
           class="pi pi-bars text-xl p-1 cursor-pointer mr-1"
           @click="visible = true"
@@ -30,11 +30,14 @@
 
 <script setup>
 const currentUser = useSupabaseUser()
-const visible = ref( false )
+const visible = ref(false)
 </script>
 
 <style lang="scss" scoped>
 header .logo {
   margin-bottom: -5px;
+}
+header a {
+  color: var(--text-color);
 }
 </style>
