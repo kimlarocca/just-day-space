@@ -32,13 +32,13 @@
           choose-label="Update"
           :auto="true"
           upload-icon="pi pi-image"
-          class="mr-2 fit-width black"
+          class="mr-2 fit-width"
           style="height: 36px; text-transform: capitalize"
         />
         <Button
           v-if="imageUrl"
           @click="deleteImage"
-          class="black p-button-rounded"
+          class="p-button-rounded"
           icon="pi pi-trash"
         />
       </div>
@@ -63,62 +63,62 @@
 </template>
 
 <script setup>
-const emit = defineEmits( [ 'imageUploaded' ] )
+const emit = defineEmits(['imageUploaded'])
 
 const currentUser = useSupabaseUser()
 const currentUserProfile = useCurrentUserProfile()
 const supabase = useSupabaseClient()
 
-const props = defineProps( {
+const props = defineProps({
   image: {
     type: String,
     default: '',
-    required: true,
-  },
-} )
+    required: true
+  }
+})
 
-const uploading = ref( false )
+const uploading = ref(false)
 const errorMessage = ref()
 const successMessage = ref()
-const imageUrl = ref( props.image )
+const imageUrl = ref(props.image)
 
-const uploadImage = async ( event ) => {
+const uploadImage = async event => {
   try {
     uploading.value = true
-    const file = event.files[ 0 ]
-    const fileExt = file.name.split( '.' ).pop()
-    const filePath = `${ props.userId }-${ Math.random() }.${ fileExt }`
+    const file = event.files[0]
+    const fileExt = file.name.split('.').pop()
+    const filePath = `${props.userId}-${Math.random()}.${fileExt}`
 
     const { error: uploadError } = await supabase.storage
-      .from( 'avatars' )
-      .upload( filePath, file )
+      .from('avatars')
+      .upload(filePath, file)
 
-    if ( uploadError ) throw uploadError
+    if (uploadError) throw uploadError
 
     const { data: imagePublicUrl } = await supabase.storage
-      .from( 'avatars' )
-      .getPublicUrl( filePath )
+      .from('avatars')
+      .getPublicUrl(filePath)
 
     imageUrl.value = imagePublicUrl.publicUrl
 
     const { error } = await supabase
-      .from( 'profiles' )
-      .upsert( {
+      .from('profiles')
+      .upsert({
         id: currentUser.value.id,
         updated_at: new Date().toISOString(),
-        avatar_url: imageUrl.value,
-      } )
-      .match( { id: currentUser.value.id } )
-    if ( error ) {
-      console.log( error )
-      errorMessage.value = `Error: ${ error }`
+        avatar_url: imageUrl.value
+      })
+      .match({ id: currentUser.value.id })
+    if (error) {
+      console.log(error)
+      errorMessage.value = `Error: ${error}`
     } else {
       successMessage.value = 'Success! Your image has been saved.'
       currentUserProfile.value.avatar_url = imageUrl.value
-      emit( 'imageUploaded' )
+      emit('imageUploaded')
     }
-  } catch ( error ) {
-    errorMessage.value = `Error: ${ error }`
+  } catch (error) {
+    errorMessage.value = `Error: ${error}`
   } finally {
     uploading.value = false
   }
@@ -127,16 +127,16 @@ const uploadImage = async ( event ) => {
 // delete the image from the database and storage
 const deleteImage = async () => {
   const { error } = await supabase
-    .from( 'profiles' )
-    .upsert( {
+    .from('profiles')
+    .upsert({
       id: currentUser.value.id,
       updated_at: new Date().toISOString(),
-      avatar_url: null,
-    } )
-    .match( { id: currentUser.value.id } )
-  if ( error ) {
-    console.log( error )
-    errorMessage.value = `Error: ${ error }`
+      avatar_url: null
+    })
+    .match({ id: currentUser.value.id })
+  if (error) {
+    console.log(error)
+    errorMessage.value = `Error: ${error}`
   } else {
     successMessage.value = 'Success! Your photo has been deleted.'
     imageUrl.value = null

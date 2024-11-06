@@ -20,8 +20,8 @@
                   <h6 class="mb-2">Step 1</h6>
                   <h2 class="mb-2">The Basics</h2>
                   <p>
-                    Share some basic information like where your space is
-                    located and what type of space it is.
+                    Share some basic information like where and what type your
+                    space is.
                   </p>
                 </div>
                 <img
