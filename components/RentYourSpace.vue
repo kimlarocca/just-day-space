@@ -1,19 +1,10 @@
 <template>
-  <div class="hero p-4 px-6">
-    <h1 class="mb-2">Find Your Escape</h1>
-    <h2 class="mb-5">Connecting spaces with people who need them</h2>
-    <div class="p-inputgroup w-fit">
-      <span class="p-float-label inline">
-        <InputText
-          id="location"
-          v-model="location"
-          required
-          style="width: 410px"
-        />
-        <label for="location">Search for spaces</label>
-      </span>
-      <Button icon="pi pi-search" class="px-4" />
-    </div>
+  <div class="hero rounded p-4 px-6">
+    <h1 class="mb-2">Rent Your Space</h1>
+    <h2 class="mb-5">
+      Turn your empty space into a money maker<br />with Just Day Space!
+    </h2>
+    <Button label="get started for free" class="px-4" />
   </div>
 </template>
 
@@ -26,7 +17,7 @@ const location = ref('')
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url('/images/hero.jpg') no-repeat center center;
+  background: url('/images/signup.jpg') no-repeat center center;
   background-size: cover;
   min-height: 500px;
 }

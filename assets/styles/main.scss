@@ -28,24 +28,19 @@ a:active {
   text-decoration: none;
   color: var(--link-color);
   border-bottom: none;
-  border-bottom: solid 1px transparent;
+  border-bottom: solid 1px var(--link-color);
   transition: var(--transition);
-
   &:hover {
     border-bottom: solid 1px var(--link-color);
   }
+}
 
-  &.plain {
-    border-bottom: none;
+.plain {
+  border-bottom: none;
+  text-decoration: none;
+  &:hover {
     text-decoration: none;
-    &:hover {
-      text-decoration: none;
-      border-bottom: none;
-    }
-  }
-
-  &.gray {
-    color: var(--gray);
+    border-bottom: none;
   }
 }
 
@@ -129,25 +124,44 @@ table {
 
 .tag {
   width: fit-content;
-  min-width: 50px;
+  height: 28px;
+  line-height: 28px;
   text-align: center;
-  background: var(--purple);
-  color: var(--white);
-  border-radius: var(--border-radius);
-  padding: 0.5rem 1rem;
-  font-family: var(--font-family);
+  background: var(--blue);
+  color: var(--black);
+  border-radius: 20px;
+  padding: 0 0.75rem;
   font-size: var(--font-size-3);
-  font-weight: 400;
+  font-family: var(--font-family);
+  font-weight: 500;
   text-transform: uppercase;
-  @media all and (min-width: $medium) {
-    font-size: var(--font-size-4);
+  &.active {
+    background: var(--yellow);
   }
-}
-
-.tag.large {
-  height: 50px;
-  line-height: 50px;
-  padding: 0 1rem;
+  &.outline {
+    background: transparent;
+    color: var(--black);
+    border: solid 1px var(--black);
+  }
+  &.large {
+    min-width: 50px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 1rem;
+    font-size: var(--font-size-3);
+    @media all and (min-width: $medium) {
+      font-size: var(--font-size-4);
+    }
+  }
+  &.round {
+    border-radius: 50%;
+    padding: 0;
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 // prime vue overrides

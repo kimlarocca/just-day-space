@@ -224,7 +224,7 @@
                 />
                 <Message severity="info">
                   Based on your listing type and location, we recommend
-                  <strong>$25/hour</strong>
+                  <strong>$35/hour</strong>
                 </Message>
               </div>
               <div class="mb-6">

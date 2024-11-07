@@ -1,12 +1,11 @@
 <template>
-  <footer class="p-4">
-    <Divider class="mb-5" />
+  <footer class="p-6">
     <Logo class="mb-2" />
     <div class="flex justify-content-between flex-column lg:flex-row">
       <p class="mb-2">
-        <nuxt-link to="/" class="plain mr-4"> Privacy Policy </nuxt-link>
-        <nuxt-link to="/" class="plain mr-4"> Terms </nuxt-link>
-        <nuxt-link to="/" class="plain"> Help Center </nuxt-link>
+        <nuxt-link to="/" class="mr-4"> Privacy Policy </nuxt-link>
+        <nuxt-link to="/" class="mr-4"> Terms </nuxt-link>
+        <nuxt-link to="/"> Help Center </nuxt-link>
       </p>
       <p>Copyright © {{ currentYear }} Just Day Space. All Rights Reserved.</p>
     </div>
