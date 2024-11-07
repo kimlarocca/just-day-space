@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard container p-4">
+  <div class="dashboard p-4 px-6">
     <Html lang="en">
       <Head>
         <Title>Just Day Space | Manage Your Spaces</Title>
@@ -9,7 +9,7 @@
       <div class="grid top" v-if="progress === 0">
         <div class="col col-5">
           <h1 class="h-full flex align-items-center">
-            Get Started & Add Your First Space!
+            Let's Get Started & Add Your First Space!
           </h1>
         </div>
         <div class="col col-7">
@@ -363,12 +363,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-.dashboard {
-  overflow: hidden;
-}
 .top {
-  height: 420px;
-  overflow: hidden;
+  min-height: 420px;
 }
 .bottom {
   position: fixed;

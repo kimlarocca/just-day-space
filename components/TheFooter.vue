@@ -1,5 +1,5 @@
 <template>
-  <footer class="p-6">
+  <footer class="p-4 px-6 pt-6">
     <Logo class="mb-2" />
     <div class="flex justify-content-between flex-column lg:flex-row">
       <p class="mb-2">

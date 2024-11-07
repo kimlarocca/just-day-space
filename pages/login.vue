@@ -1,5 +1,5 @@
 <template>
-  <div class="login container p-4">
+  <div class="login p-4 px-6">
     <Html lang="en">
       <Head>
         <Title>Just Day Space | Login</Title>
@@ -27,6 +27,7 @@
         />
       </div>
     </div>
+    <Divider class="mt-8" />
   </div>
 </template>
 

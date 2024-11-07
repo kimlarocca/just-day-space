@@ -7,6 +7,7 @@
     </Html>
     <h1 class="mb-4">You've Been Logged Out</h1>
     <p><a href="/">Click here</a> to return to the home page.</p>
+    <Divider class="mt-8" />
   </div>
 </template>
 
@@ -14,23 +15,23 @@
 // sign out from supabase
 const client = useSupabaseClient()
 const { error } = await client.auth.signOut()
-if ( error ) {
-  console.log( 'error' )
+if (error) {
+  console.log('error')
 }
 
 // set the currentUser composable to null
-const currentUser = useState( useCurrentUser )
+const currentUser = useState(useCurrentUser)
 currentUser.value = null
 
 // set the currentUserProfile composable to null
 const currentUserProfile = useCurrentUserProfile()
 currentUserProfile.value = null
 
-onMounted( () => {
+onMounted(() => {
   // check local storage for the auth token
-  if ( process.client ) {
+  if (process.client) {
     // clear localStorage
     localStorage.clear()
   }
-} )
+})
 </script>

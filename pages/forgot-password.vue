@@ -1,5 +1,5 @@
 <template>
-  <div class="forgot-password container p-4">
+  <div class="forgot-password p-4 px-6">
     <Html lang="en">
       <Head>
         <Title>Just Day Space | Forgot Password</Title>
@@ -25,6 +25,7 @@
         />
       </div>
     </div>
+    <Divider class="mt-8" />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <Hero class="mb-3" />
-    <div class="p-6">
+    <div class="p-4 px-6">
       <div class="flex align-items-center gap-2 flex-wrap mb-6">
         <div
           class="tag large outline clickable"
@@ -47,6 +47,7 @@
       <CollectionOffice title="Places To Work" class="mb-7" />
       <CollectionArt title="Art Studios" class="mb-8" />
       <RentYourSpace />
+      <Divider class="mt-8" />
     </div>
   </div>
 </template>
