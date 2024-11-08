@@ -13,6 +13,15 @@
         <div class="width400">
           <supabase-login-with-email class="mb-4" />
           <p class="small mb-4">
+            Don't have an account yet?
+            <nuxt-link
+              to="https://amyinfinity.com/justdayspace-signup"
+              @click="emit('closePanel')"
+            >
+              Request early access.
+            </nuxt-link>
+          </p>
+          <p class="small mb-4">
             <nuxt-link to="/forgot-password" @click="emit('closePanel')">
               Forgot Password?
             </nuxt-link>
