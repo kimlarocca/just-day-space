@@ -48,9 +48,9 @@
         </div>
       </div>
     </div>
-    <Divider class="my-5" />
+    <Divider v-if="currentUser" class="my-5" />
     <div class="mx-4">
-      <p class="small mb-3">
+      <p class="hidden small mb-3">
         <nuxt-link to="/" @click="emit('menuClicked', true)">
           Find A Space
         </nuxt-link>
