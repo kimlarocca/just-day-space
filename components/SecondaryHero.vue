@@ -1,12 +1,12 @@
 <template>
-  <div class="secondary-hero p-4">
+  <div class="secondary-hero p-4 px-6">
     <h1>{{ title }}</h1>
     <h2 v-if="subTitle" class="mt-2 mb-6">{{ subTitle }}</h2>
   </div>
 </template>
 
 <script setup>
-const props = defineProps( {
+const props = defineProps({
   title: {
     type: String,
     default: null,
@@ -16,8 +16,8 @@ const props = defineProps( {
     type: String,
     default: null,
     required: false
-  },
-} )
+  }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -25,7 +25,7 @@ const props = defineProps( {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("/images/hero.jpg") no-repeat center center;
+  background: url('/images/hero.jpg') no-repeat center center;
   background-size: cover;
   min-height: 200px;
 }

@@ -6,7 +6,7 @@
       </Head>
     </Html>
     <SecondaryHero title="Help Center" class="mb-6" />
-    <div class="container p-4">
+    <div class="container p-4 px-6">
       <p class="mb-4">Our help center is coming soon!</p>
       <p>
         In the meantime, please

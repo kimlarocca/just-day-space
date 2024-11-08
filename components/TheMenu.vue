@@ -28,18 +28,21 @@
         <div v-if="currentUser">
           <p class="mb-2 font-bold">
             Welcome back<template v-if="currentUserProfile?.full_name"
-              >, {{ currentUserProfile?.full_name }} </template
+              >, {{ currentUserProfile?.full_name }}</template
             >!
           </p>
           <p class="small">{{ currentUser?.email }}</p>
         </div>
         <div v-else>
           <p class="mb-2 font-bold">You are logged out.</p>
-          <Button @click="showLogin = true" label="log in" class="mb-2" />
+          <Button @click="showLogin = true" label="log in" class="mb-3" />
           <p class="small mb-6">
-            Don't have an account yet?
-            <nuxt-link to="/signup" @click="emit('menuClicked', true)">
-              Sign up
+            Don't have an account yet?<br />
+            <nuxt-link
+              to="https://amyinfinity.com/justdayspace-signup"
+              @click="emit('closePanel')"
+            >
+              Request early access.
             </nuxt-link>
           </p>
         </div>
@@ -90,11 +93,9 @@
 <script setup>
 const currentUser = useSupabaseUser()
 const currentUserProfile = useCurrentUserProfile()
-const emit = defineEmits( [ 'menuClicked' ] )
-const showLogin = ref( false )
+const emit = defineEmits(['menuClicked'])
+const showLogin = ref(false)
 </script>
-
-
 
 <style lang="scss" scoped>
 .p-avatar.p-avatar-circle {
